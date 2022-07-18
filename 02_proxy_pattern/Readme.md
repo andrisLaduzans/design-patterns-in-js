@@ -68,3 +68,6 @@ Overusing the `Proxy` object of performing heavy operations on each handler meth
 
 ### State management
 - when using in react, when changing the object, you would still require to update state somehow to trigger re-rendering.
+- usefull for abstracting some kind of validation when adding values to an object instead of writing function before adding value to object, you can hide the validation in `.set()` method.
+- on the other hand it might be a bit confusing for someone who does not know if object is using proxy behind the scenes since setting syntax `object.parameter = value` does not differ from regular object value assign whatsoever.
+- seems like in React world it still would be more profitable to use redux design or global context hook pattern instead.
